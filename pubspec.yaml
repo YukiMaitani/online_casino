@@ -34,3 +34,7 @@ flutter:
 
   assets:
     - assets/images/card/
+
+  shaders:
+    - shaders/poker_table.frag
+
