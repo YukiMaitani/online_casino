@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:online_casino/util/shader_util.dart';
 
 class ShaderPainter extends CustomPainter {
-  ShaderPainter(this.shader, {this.uniforms = const []});
+  ShaderPainter(this.shader, {this.uniforms = const [], this.repaint = true});
 
   final FragmentShader shader;
   final List<dynamic> uniforms;
+  final bool repaint;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -17,5 +18,5 @@ class ShaderPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) => true;
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => repaint;
 }

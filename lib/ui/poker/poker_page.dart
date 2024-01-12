@@ -18,7 +18,7 @@ class PokerPage extends HookConsumerWidget {
   Widget _body() {
     return const Stack(
       children: [
-        PokerTable(),
+        Center(child: PokerTable()),
       ],
     );
   }
